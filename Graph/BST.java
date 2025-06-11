@@ -36,12 +36,15 @@ public class BST {
                     node = delete(node, key);
                     break;
                 case '4':
-                    System.out.println("InOrder Traversal");
+                    System.out.println("\nInOrder Traversal");
                     printInOrder(node);
                     System.out.println();
-                    System.out.println("PreOrder Traversal");
+                    System.out.println("\nPreOrder Traversal");
                     printPreOrder(node);
                     System.out.println();
+                    System.out.println("\nPostOrder Traversal");
+                    printPostOrder(node);
+                    System.out.println("\n");
                     break;
                 default:
                     flag = false;
@@ -76,7 +79,7 @@ public class BST {
 
     static Node delete(Node node, int key) {
         if (null == node) {
-            System.out.println("key not found");
+            System.out.println("Key not found");
             return null;
         } else if (node.val < key) {
             node.right = delete(node.right, key);
@@ -92,6 +95,7 @@ public class BST {
                 delete(node, successor.val);
                 node.val = successor.val;
             }
+            System.out.println("Key deleted");
         }
         return node;
     }
@@ -103,6 +107,14 @@ public class BST {
         return inOrderSuccessor(node.left);
     }
 
+    static void printPreOrder(Node root) {
+        if (root != null) {
+            System.out.print(root.val + " ");
+            printInOrder(root.left);
+            printInOrder(root.right);
+        }
+    }
+
     static void printInOrder(Node root) {
         if (root != null) {
             printInOrder(root.left);
@@ -111,11 +123,11 @@ public class BST {
         }
     }
 
-    static void printPreOrder(Node root) {
+    static void printPostOrder(Node root) {
         if (root != null) {
-            System.out.print(root.val + " ");
             printInOrder(root.left);
             printInOrder(root.right);
+            System.out.print(root.val + " ");
         }
     }
 }
