@@ -12,3 +12,6 @@
 * Merge Sort
 * Quick Sort
 * Selection Sort
+
+### Graph Alogirhtms
+* Insertion/Search/Deletion in BST
