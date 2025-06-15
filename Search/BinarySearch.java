@@ -11,7 +11,7 @@ public class BinarySearch {
         int key = Integer.parseInt(in.readLine());
         int left = 0;
         int right = n - 1;
-        while (left >= 0 && right < n && left < right) {
+        while (left >= 0 && right < n && left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] == key) {
                 System.out.println("Key found");
