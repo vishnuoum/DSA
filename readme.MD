@@ -15,3 +15,13 @@
 
 ### Graph Alogirhtms
 * Insertion/Search/Deletion in BST
+* Trie
+* BFS
+* DSF
+* MST
+    * Prims algorithm
+    * Kruskal's algorithm
+* Shortest Path
+    * Djikstra's algorithm
+    * Bellman Ford's algorithm
+    * Floyd Warshal algorithm
